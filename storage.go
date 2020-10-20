@@ -1,6 +1,8 @@
 package poseidon
 
-import "sync"
+import (
+	"sync"
+)
 
 type storage struct {
 	syncMap *sync.Map

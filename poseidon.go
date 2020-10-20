@@ -32,4 +32,5 @@ func (s *LocalStorage) GetItem(key string) (string, bool) {
 }
 
 func (s *LocalStorage) RemoveItem(key string) {
+	s.sea.Delete(key)
 }

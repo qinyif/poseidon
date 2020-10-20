@@ -61,7 +61,7 @@ func (lru *LRU) Put(key string, value string) {
 	lru.clean <- incrLen
 }
 
-func (lru *LRU) Delete(key string, value string) {
+func (lru *LRU) Delete(key string) {
 	item, ok := lru.storage.LoadAndDelete(key)
 	if !ok {
 		return
